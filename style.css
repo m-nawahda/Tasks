@@ -1,0 +1,85 @@
+body {
+  max-width: 2440px;
+  margin: 0;
+  padding: 0 !important;
+}
+
+.header {
+  height: 70px;
+  top: 0;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: dimgrey;
+  color: white;
+  font-size: 24px;
+  font-family: monospace;
+  z-index: 1;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  padding-top: 30px;
+  overflow-x: hidden;
+  background-color: #e9e3e3;
+  box-shadow: 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+  background-color: gray;
+}
+
+.main-content {
+  width: calc(100% - 250px);
+  padding: 20px;
+  margin-left: 250px !important;
+  margin-right: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: -2;
+}
+
+.item-container {
+  box-sizing: border-box;
+  padding: 0 10px 10px 0 !important;
+}
+
+.item {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  overflow-wrap: break-word;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item .item-name {
+  width: 100%;
+  margin: 5px;
+}
+
+hr {
+  border-top: 1px solid black !important;
+}
+
+.item p {
+  width: 100%;
+  margin: 5px;
+}
