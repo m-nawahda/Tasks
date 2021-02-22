@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  </head>
-  <body>
-    <div class="header">Task1</div>
-    <div>
-    <div id="mySidebar" class="sidebar">
+<head>
+  <title>Task1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body onload="getRooms()">
+  <div class="root">
+    <header class="header">
+      <h1>Task1</h1>
+    </header>
+
+    <aside id="mySidebar" class="sidebar">
       <a href="#">About</a>
       <a href="#">Contact</a>
-    </div>
+    </aside>
 
-    <div class="main-content row">
-      <div class="item-container">  
-    </div>
-    </div>
-    <script src="getItems.js"></script>
-  </body>
+    <main class="main-content">
+    </main>
+  <script src="getItems.js"></script>
+
+</body>
+
 </html>

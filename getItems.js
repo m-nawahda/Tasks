@@ -1,30 +1,37 @@
-$(document).ready(function () {
-    $.ajax({
-        url: "https://api.jsonbin.io/b/60323b2ea3e9f25d023d11f2",
-        method: "GET",
-        data: {},
-        success: function (data) {
-            console.log(data);
-            $(".main-content").empty();
-            for (x in data) {
-                var itemContainer = $(
-                    '<div class="item-container col-sm-6 col-md-4 col-lg-3">\
-                    <div class="item">\
-                            <img onerror="error(this)"src="images/' + data[x].url + '.jpg" alt=' + data[x].name + ' />\
-                            <h2 class="item-name">' + data[x].name + '</h2>\
-                            <hr>\
-                            <p>' + data[x].description + '</p>\
-                     </div>\
-                     </dov>');
-                $(".main-content").append(itemContainer);
+function getRooms() {
+
+    var promise = new Promise(function (myResolve) {
+
+        if (document.readyState == "complete") {
+            myResolve()
+        }
+    })
+
+    promise.then(
+        async function () {
+            let response = await fetch("https://api.jsonbin.io/b/60323b2ea3e9f25d023d11f2");
+            if (response.ok) {
+                let data = await response.json();
+                console.log(data)
+                for (x in data) {
+                    var itemContainer = $(
+                        '<div class="item-container">\
+                        <div class="item">\
+                                <img onerror="error(this)"src="images/' + data[x].url + '.jpg" alt=' + data[x].name + ' />\
+                                <h2 class="item-name">' + data[x].name + '</h2>\
+                                <hr>\
+                                <p>' + data[x].description + '</p>\
+                         </div>\
+                         </div>');
+                    $(".main-content").append(itemContainer);
+                }
+            } else {
+                log("Http-Error" + response.status);
             }
-        },
-        error: function (data) {},
+        }
+    )
+}
 
-        complete: function () {},
-    });
-
-})
-function error(obj){
-    obj.src="images/error.png";
+function error(obj) {
+    obj.src = "images/error.png";
 }
