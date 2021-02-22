@@ -1,6 +1,7 @@
 html {
   height: 100%;
 }
+
 body {
   max-width: 2440px;
   margin: 0;
@@ -51,8 +52,7 @@ body {
 
 .main-content {
   display: grid;
-  margin: 10px;
-  z-index: -1;
+  margin: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -78,9 +78,11 @@ body {
     grid-template-columns: 25% 25% 25% 25%;
   }
 }
+
 .item-container {
   padding: 5px;
 }
+
 .item {
   height: 100%;
   border: 1px solid rgba(0, 0, 0, 0.3);
