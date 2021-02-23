@@ -4,22 +4,16 @@ html {
 
 body {
   max-width: 2440px;
-  margin: 0;
-  padding: 0;
   height: 100%;
-}
-
-.root {
   display: grid;
-  height: 100%;
   grid-template-columns: 180px;
   grid-template-rows: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
   grid-area: 1 / 1 / span 1 / span 2;
-  position: sticky;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +21,6 @@ body {
   color: white;
   font-size: 24px;
   font-family: monospace;
-  z-index: 1;
 }
 
 .sidebar {
@@ -53,6 +46,7 @@ body {
 .main-content {
   display: grid;
   margin: 5px;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 768px) {
